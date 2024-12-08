@@ -1,0 +1,27 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "express framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhumitha-r26/MERN-practice-2.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "madhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhumitha-r26/MERN-practice-2/issues"
+  },
+  "homepage": "https://github.com/madhumitha-r26/MERN-practice-2#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.7",
+    "uuid": "^11.0.3"
+  }
+}
