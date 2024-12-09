@@ -12,9 +12,9 @@ router.get("/",(req,res)=>{
 
 //get user by id
 router.get("/:id",(req,res)=>{
-    const found=users.some(user=>user.id === parseInt(req.params.id))
+    const found=users.some((user)=>user.id === parseInt(req.params.id))
     if(found){
-        res.json(users.filter(user=>user.id === parseInt(req.params.id)))
+        res.json(users.filter((user)=>user.id === parseInt(req.params.id)))
     }
     else{
         res.sendStatus(400);
@@ -38,10 +38,10 @@ router.post("/",(req,res)=>{
 
 //update user
 router.put("/:id",(req,res)=>{
-    const found=users.some(user=>user.id === parseInt(req.params.id))
+    const found=users.some((user)=>user.id === parseInt(req.params.id))
     if(found){
         const updateUser=req.body;
-        users.forEach(user=>{
+        users.forEach((user)=>{
             if(user.id === parseInt(req.params.id))
             {
                 user.name=updateUser.name? updateUser.name:user.name;
@@ -53,9 +53,9 @@ router.put("/:id",(req,res)=>{
 })
 
 router.delete("/:id",(req,res)=>{
-  const found=users.some(user=>user.id === parseInt(req.params.id))
+  const found=users.some((user)=>user.id === parseInt(req.params.id))
   if(found){
-      users=users.filter(user=>user.id !== parseInt(req.params.id))
+      users=users.filter((user)=>user.id !== parseInt(req.params.id))
       res.json({
           msg:"User deleted",
           users,
