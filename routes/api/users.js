@@ -46,7 +46,10 @@ router.put("/:id",(req,res)=>{
             {
                 user.name=updateUser.name? updateUser.name:user.name;
                 user.email=updateUser.email? updateUser.email:user.email;
-                res.json({msg:"User updated",user})
+                res.json({
+                    msg:"User updated",
+                    data:user
+                })
             }
         })
     }
@@ -58,7 +61,7 @@ router.delete("/:id",(req,res)=>{
       users=users.filter((user)=>user.id !== parseInt(req.params.id))
       res.json({
           msg:"User deleted",
-          users,
+          data:users,
       });
   }
   else{
